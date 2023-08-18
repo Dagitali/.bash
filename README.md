@@ -22,7 +22,7 @@ light work for software engineers and data scientists in their daily work.
 
 ## Getting Started
 
-.bash supports 2 UNIX-flavored operating systems:
+.bash supports 2 UNIX-like operating systems:
 
 - [Linux][Linux]
 - [macOS][macOS]
@@ -54,16 +54,43 @@ git clone https://github.com/dagitali/.bash.git
 ```
 
 Alternatively, teams may prefer to clone .bash to a shared, visible directory,
-such as `env`.
+such as `bash`.
 
 ```bash
-cd <path_to_env_parent_dir>
+cd <path_to_bash_parent_dir>
 git clone https://github.com/dagitali/.bash.git bash
 ```
 
 ### Usage
 
-TBD
+The complete set of .bash variables, aliases, and functions can be conveniently
+sourced into any Unix-like Bash shell script using these 2 setup scripts:
+
+- `src/setup/rc.sh`
+- `src/setup/profile.sh`
+
+Each sources a subset of .bash based on the intended type of Bash shell session.
+For example, the first of these is intended for interactive non-login sessions.
+As such, it is convenient to source it from the the Bash startup script
+`/etc/bashrc` (system-wide) or `~/.bashrc` (user-specific) like as follows:
+
+```bash
+BASH_HOME="${BASH_HOME:-${HOME}/.bash}"
+
+if [[ -f "${BASH_HOME}/src/setup/rc.sh" ]]; then
+    . "${BASH_HOME}/src/setup/rc.sh"
+fi
+```
+
+The second of these 2 scripts is intended for interactive login sessions. Here,
+it is convenient to source it from the the Bash startup script `/etc/profile`
+(system-wide) or`~/.bash_profile` (user-specific) like as follows:
+
+```bash
+if [[ -f "${BASH_HOME}/src/setup/profile.sh" ]]; then
+    . "${BASH_HOME}/src/setup/profile.sh"
+fi
+```
 
 ## Builds and Testing
 
@@ -71,7 +98,7 @@ TBD
 
 ## Documentation
 
-Documentation for .env is this README itself, plus the documents listed in the
+Documentation for .bash is this README itself, plus the documents listed in the
 subsections that follow.
 
 ### Community Health
