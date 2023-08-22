@@ -10,6 +10,7 @@
 # 1. https://fileinfo.com/extension/gitignore
 # 2. https://git-scm.com/docs/gitignore
 # 3. https://gitignore.io
+# 4. https://stackoverflow.com/questions/5533050/gitignore-exclude-folder-but-include-specific-subfolder
 
 # Created by https://www.toptal.com/developers/gitignore/api/dropbox,emacs,linux,macos,vim,visualstudiocode,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=dropbox,emacs,linux,macos,vim,visualstudiocode,windows
@@ -188,6 +189,8 @@ $RECYCLE.BIN/
 *.env
 
 lib/*
-!lib/.gitkeep
+!lib/custom/
+lib/custom/*
+!lib/custom/.gitkeep
 
 tmp/
