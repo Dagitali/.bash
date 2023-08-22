@@ -56,7 +56,7 @@ __bash_source() {
 # SECTION: SOURCES ############################################################
 
 # Export environment variables.
-__bash_source "${ENV_HOME}"/etc/{secrets,settings}.env
+__bash_source "${ENV_HOME}"/{secrets,settings}.env
 
 # Source custom Git-ignored shell scripts.
 __bash_source "${BASH_HOME}"/lib/custom/*
