@@ -59,4 +59,4 @@ __bash_source() {
 __bash_source "${ENV_HOME}"/{secrets,settings}.env
 
 # Source custom Git-ignored shell scripts.
-__bash_source "${BASH_HOME}"/lib/custom/*
+__bash_source "$(ls ${BASH_HOME}/lib/custom)" || true
