@@ -13,7 +13,7 @@
 
 # shellcheck shell=bash disable=SC2154
 
-# SECTION: VARIABLES ##########################################################
+# SECTION: VARIABLES ======================================================== #
 
 ### Native ###
 
@@ -36,7 +36,7 @@ export GIT_PS1_SHOWSTASHSTATE=${GIT_PS1_SHOWSTASHSTATE:-1}
 export GIT_PS1_SHOWUNTRACKEDFILES=${GIT_PS1_SHOWUNTRACKEDFILES:-1}
 export GIT_PS1_SHOWUPSTREAM=${GIT_PS1_SHOWUPSTREAM:-auto}
 
-# SECTION: SOURCES ############################################################
+# SECTION: SOURCES ========================================================== #
 
 # Source Git-related scripts.
 [[ -d "${BASH_HOME}"/lib/git ]] &&
