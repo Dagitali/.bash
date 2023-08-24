@@ -8,17 +8,17 @@
 
 # shellcheck shell=bash disable=SC2086 source=/dev/null
 
-# SECTION: VARIABLES ##########################################################
+# SECTION: VARIABLES ======================================================== #
 
 BASH_HOME="${BASH_HOME:-$(dirname "$(dirname "$(dirname "${_}")")")}"
 ENV_HOME="${ENV_HOME:-${HOME}/.env}"
 
-# SECTION: ALIASES ############################################################
+# SECTION: ALIASES ========================================================== #
 
 # Match non-comment, non-empty lines.
 alias __bash_strip='grep -Ev "^#|^$"'
 
-# SECTION: FUNCTIONS ##########################################################
+# SECTION: FUNCTIONS ======================================================== #
 
 __bash_error() {
   echo "$0: $*" >&2
@@ -53,7 +53,7 @@ __bash_source() {
   done
 }
 
-# SECTION: SOURCES ############################################################
+# SECTION: SOURCES ========================================================== #
 
 # Export environment variables.
 __bash_source "${ENV_HOME}"/{secrets,settings}.env
