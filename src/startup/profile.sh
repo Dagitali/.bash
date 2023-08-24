@@ -8,11 +8,11 @@
 
 # shellcheck shell=bash
 
-# SECTION: VARIABLES ##########################################################
+# SECTION: VARIABLES ======================================================== #
 
 PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
-# SECTION: SOURCES ############################################################
+# SECTION: SOURCES ========================================================== #
 
 # Source Git-related shell scripts.
 __bash_source "${BASH_HOME}"/src/platforms/git.sh
